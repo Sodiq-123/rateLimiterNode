@@ -49,8 +49,6 @@ app.get('/', (req: Request, res: Response) => {
   res.send("Hello and welcome to my rate limiter");
 });
 
-console.log('Server is running on port 3000');
-
 app.get('/app/1', async (req: Request, res: Response) => {
   const requestFromIp: number = (req as any).requestFromIp
   const ttl = (req as any).requestFromIpTtl
